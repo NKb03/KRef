@@ -7,7 +7,7 @@ package org.nikok.kref.impl
 import org.nikok.kref.MutableRef
 import java.lang.ref.SoftReference
 
-internal class MutableSoftRef<T>(value: T) : MutableRef<T> {
+internal class MutableSoftRef<T : Any>(value: T) : MutableRef<T> {
     private var softReference = SoftReference(value)
 
     override var referent: T?

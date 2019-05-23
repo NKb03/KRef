@@ -10,7 +10,7 @@ import kotlin.reflect.KProperty
 /**
  * A reference to an object of type [T]
 */
-interface Ref<out T> : ReadOnlyProperty<Any?, T?> {
+interface Ref<out T : Any> : ReadOnlyProperty<Any?, T?> {
     /**
      * The object referenced by this [Ref]
     */

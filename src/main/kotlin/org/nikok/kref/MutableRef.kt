@@ -10,7 +10,7 @@ import kotlin.reflect.KProperty
 /**
  * A mutable reference to an object of type [T]
 */
-interface MutableRef<T>: Ref<T>, ReadWriteProperty<Any?, T?> {
+interface MutableRef<T : Any> : Ref<T>, ReadWriteProperty<Any?, T?> {
     override var referent: T?
 
     override fun getValue(thisRef: Any?, property: KProperty<*>) = referent
