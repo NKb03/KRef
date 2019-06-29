@@ -9,7 +9,7 @@ To install KRef you need to follow these steps:
 - Clone the repository: `git clone https://github.com/NKB03/KRef <target_dir>`
 - Build with gradle: `gradle build`
 - Publish to maven local to make the library available for other projects: `gradle publishToMavenLocal`
-- Open in IntelliJ or any other IDE 
+- Open in IntelliJ or any other IDE   
 If any errors occur while installing please feel free to create an issue or write me an e-mail.
 
 ### Running tests
@@ -18,7 +18,7 @@ Just the `Spec` in package `org.nikok.kref` in the test source root and see the 
 Testing via gradle is not supported.
 
 ## Contributing
-Contributing is very much appreciated. Please feel free to suggest any improvements by creating an issue.
+Contributing is very much appreciated. Please feel free to suggest any improvements by creating an issue.  
 If you have questions about the API or the internals just contact me via e-mail.
 
 ## Authors
