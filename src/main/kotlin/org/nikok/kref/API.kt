@@ -56,3 +56,13 @@ fun <T : Any> mutableWrapper(ref: MutableRef<T>) = MutableRefWrapper(ref)
  * @return a [Cache] computing the given [initializer]
  */
 fun <T : Any> cached(initializer: () -> T) = Cache(initializer)
+
+/**
+ * @return a [ForcedRef] wrapping this Ref
+ */
+fun <T : Any> Ref<T>.forced(): ForcedRef<T> = ForcedRef(this)
+
+/**
+ * @return a [ForcedRef] wrapping the given [referent]
+ */
+fun <T : Any> forcedWeak(referent: T): ForcedRef<T> = weak(referent).forced()
