@@ -23,7 +23,7 @@ fun <T : Any> soft(referent: T): Ref<T> = SoftRef(referent)
  * @return a property delegate holding a strong reference to [referent]
  */
 
-fun <T : Any> strong(referent: T): Ref<T> = SoftRef(referent)
+fun <T : Any> strong(referent: T): Ref<T> = StrongRef(referent)
 
 /**
  * @return a property delegate holding a [WeakReference] to [referent]
