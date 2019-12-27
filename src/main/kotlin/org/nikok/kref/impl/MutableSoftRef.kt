@@ -5,6 +5,7 @@
 package org.nikok.kref.impl
 
 import org.nikok.kref.MutableRef
+import org.nikok.kref.RefType
 import java.lang.ref.SoftReference
 
 internal class MutableSoftRef<T : Any>(value: T) : MutableRef<T> {
@@ -15,4 +16,7 @@ internal class MutableSoftRef<T : Any>(value: T) : MutableRef<T> {
         set(value) {
             softReference = SoftReference(value)
         }
+
+    override val type: RefType
+        get() = RefType.Soft
 }

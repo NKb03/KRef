@@ -66,3 +66,8 @@ fun <T : Any> Ref<T>.forced(): ForcedRef<T> = ForcedRef(this)
  * @return a [ForcedRef] wrapping the given [referent]
  */
 fun <T : Any> forcedWeak(referent: T): ForcedRef<T> = weak(referent).forced()
+
+/**
+ * @return a [Ref] that always returns `null`
+ */
+fun <T : Any> nullRef(): Ref<T> = NullRef

@@ -13,5 +13,8 @@ import kotlin.reflect.KProperty
 class ForcedRef<T : Any> internal constructor(private val original: Ref<T>) : Ref<T> {
     override val referent: T get() = original.referent ?: error("Object already garbage collected")
 
+    override val type: RefType
+        get() = RefType.Forced
+
     override fun getValue(thisRef: Any?, property: KProperty<*>): T = referent
 }

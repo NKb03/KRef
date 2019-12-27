@@ -9,4 +9,7 @@ package org.nikok.kref
 */
 class RefWrapper<T : Any> internal constructor(var ref: Ref<T>) : Ref<T> {
     override val referent: T? get() = ref.referent
+
+    override val type: RefType
+        get() = ref.type
 }

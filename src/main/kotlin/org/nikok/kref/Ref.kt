@@ -13,8 +13,13 @@ import kotlin.reflect.KProperty
 interface Ref<out T : Any> : ReadOnlyProperty<Any?, T?> {
     /**
      * The object referenced by this [Ref]
-    */
+     */
     val referent: T?
+
+    /**
+     * The type of reference this object holds
+     */
+    val type: RefType
 
     override fun getValue(thisRef: Any?, property: KProperty<*>): T? = referent
 }
